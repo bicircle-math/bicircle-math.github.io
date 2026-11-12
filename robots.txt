@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bicircle-math.github.io/sitemap.xml
