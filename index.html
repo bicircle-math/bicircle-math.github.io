@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>바이써클 수학학원 · ERGO 학습 시스템 | 인천 논현동 초·중·고 수학</title>
+<meta name="description" content="인천 남동구 논현동 바이써클 수학학원. 진단으로 막힌 지점을 찾고, 개념 설명(토킹매쓰) → 유형 학습 → 단계별 기출 → 학교 시험지 순서로 올라가는 ERGO 학습 시스템. 매 수업 기록을 학부모님께 보여드립니다.">
+<meta property="og:title" content="바이써클 수학학원 · ERGO 학습 시스템">
+<meta property="og:description" content="우리 아이 수학, 어디서 막혔는지부터 찾습니다. 인천 논현동 초·중·고 수학.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --navy:#13294b; --ink:#1d2433; --sub:#5b6476; --line:#e6e9f0; --bg:#f6f8fc;
+  --blue:#2f6bff; --blue-soft:#eaf0ff; --mint:#12b886; --mint-soft:#e6f8f1; --sun:#ffd43b; --sun-soft:#fff8db;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.65;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:88px 0;scroll-margin-top:66px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--blue);background:var(--blue-soft);padding:6px 12px;border-radius:999px;margin-bottom:16px}
+h1,h2,h3{color:var(--navy);line-height:1.3;letter-spacing:-.02em}
+h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;margin-bottom:14px}
+.lead{font-size:clamp(16px,1.6vw,18px);color:var(--sub);max-width:720px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px;padding:15px 24px;border-radius:14px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(47,107,255,.28)}
+.btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;flex-direction:column;line-height:1.15}
+.logo b{font-size:18px;color:var(--navy);font-weight:800}
+.logo span{font-size:12px;color:var(--blue);font-weight:700;letter-spacing:.04em}
+.menu{display:flex;gap:26px;font-size:15px;font-weight:600;color:var(--sub)}
+.menu a:hover{color:var(--navy)}
+.nav .btn{padding:10px 16px;font-size:14px}
+@media(max-width:860px){.menu{display:none}}
+
+/* hero */
+.hero{padding:76px 0 64px;background:radial-gradient(1200px 500px at 85% -10%,#e3ebff 0,transparent 60%),radial-gradient(800px 400px at -10% 110%,#e8faf2 0,transparent 60%),#fff}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;margin-bottom:20px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.hero .lead{margin-bottom:30px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{margin-top:18px;font-size:14px;color:var(--sub)}
+.card-stack{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 30px 60px rgba(19,41,75,.10);padding:24px}
+.card-stack h3{font-size:15px;color:var(--sub);font-weight:700;margin-bottom:14px}
+.rec{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;border-radius:14px;background:var(--bg);margin-bottom:10px;font-size:15px}
+.rec b{color:var(--navy)}
+.pill{font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px}
+.ok{background:var(--mint-soft);color:#0b8a62}.re{background:var(--sun-soft);color:#a17400}.info{background:var(--blue-soft);color:var(--blue)}
+.feedback{margin-top:14px;padding:14px;border-radius:14px;border:1px dashed #c9d5f5;font-size:14px;color:var(--ink)}
+.feedback p{margin:2px 0}.feedback strong{color:var(--blue)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+
+/* trust strip */
+.strip{background:var(--navy);color:#fff;padding:26px 0}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.strip-grid div{font-size:15px;opacity:.95}
+.strip-grid b{display:block;font-size:17px;color:#fff;margin-bottom:2px}
+@media(max-width:860px){.strip-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* worries */
+.worries{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:34px}
+.worry{background:var(--bg);border-radius:var(--r);padding:22px;font-weight:600;color:var(--navy)}
+.worry small{display:block;margin-top:8px;font-weight:500;color:var(--sub);font-size:14px}
+.answer{margin-top:26px;padding:22px 24px;border-left:4px solid var(--blue);background:var(--blue-soft);border-radius:0 var(--r) var(--r) 0;color:var(--navy);font-weight:600}
+
+/* ergo steps */
+.alt{background:var(--bg)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px;counter-reset:s}
+.step{background:#fff;border-radius:var(--r);padding:26px 22px;border:1px solid var(--line);position:relative}
+.step:before{counter-increment:s;content:"STEP " counter(s);font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.08em}
+.step h3{font-size:20px;margin:8px 0 8px}
+.step p{font-size:15px;color:var(--sub)}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.loop{margin-top:30px;background:#fff;border-radius:var(--r);border:1px solid var(--line);padding:24px}
+.loop h3{font-size:18px;margin-bottom:14px}
+.loop-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.loop-row span{background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:9px 14px;border-radius:12px}
+.loop-row i{font-style:normal;color:var(--sub);font-weight:700}
+.loop p{margin-top:12px;font-size:15px;color:var(--sub)}
+
+/* feature grid */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.f{border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;background:#fff}
+.f .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.f h3{font-size:19px;margin-bottom:8px}
+.f p{font-size:15px;color:var(--sub)}
+.f ul{margin-top:10px;padding-left:18px;font-size:14.5px;color:var(--sub)}
+@media(max-width:860px){.feat{grid-template-columns:1fr}}
+
+/* parent report */
+.report{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px}
+.phone{background:#0f1b33;border-radius:34px;padding:14px;max-width:340px;margin:0 auto;box-shadow:0 30px 60px rgba(19,41,75,.25)}
+.screen{background:#fff;border-radius:24px;padding:20px 18px}
+.screen h4{font-size:15px;color:var(--navy);margin-bottom:12px}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;background:var(--blue);border-radius:99px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chips span{font-size:12px;font-weight:700;padding:5px 9px;border-radius:8px}
+.three{list-style:none;margin-top:18px}
+.three li{padding:16px 18px;border-radius:14px;background:#fff;border:1px solid var(--line);margin-bottom:10px}
+.three b{color:var(--blue);margin-right:6px}
+@media(max-width:860px){.report{grid-template-columns:1fr}}
+
+/* schools */
+.schools{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.schools span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:600;color:var(--navy);font-size:15px}
+
+/* course table */
+table{width:100%;border-collapse:collapse;margin-top:22px;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
+th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left}
+th{background:var(--navy);color:#fff;font-weight:700}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.small{font-size:13.5px;color:var(--sub);margin-top:10px}
+.todo{background:#fff3bf;border-radius:6px;padding:1px 6px;font-weight:700;color:#8a6100}
+
+/* faq */
+.faq{margin-top:30px}
+details{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:10px;background:#fff}
+summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:16.5px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--blue);font-weight:800}
+details[open] summary:after{content:"−"}
+details p{margin-top:10px;color:var(--sub);font-size:15.5px}
+
+/* contact */
+.contact{background:linear-gradient(135deg,#13294b,#1f3f78);color:#fff;border-radius:28px;padding:48px 40px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.contact h2{color:#fff}
+.contact p{color:#d6def0}
+.contact .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.info-list{list-style:none;font-size:15.5px}
+.info-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.info-list b{display:inline-block;width:64px;color:#9fb6e8}
+@media(max-width:860px){.contact{grid-template-columns:1fr;padding:34px 24px}}
+
+footer{padding:40px 0 110px;font-size:13.5px;color:var(--sub);border-top:1px solid var(--line);margin-top:80px}
+footer b{color:var(--navy)}
+
+/* mobile bottom bar */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:8px}
+.mbar a{flex:1;text-align:center;font-weight:800;font-size:15px;padding:13px 0;border-radius:12px}
+.mbar .call{background:var(--bg);color:var(--navy)}
+.mbar .sms{background:var(--bg);color:var(--navy)}
+.mbar .apply{background:var(--blue);color:#fff;flex:1.4}
+@media(max-width:860px){.mbar{display:flex}}
+</style>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"EducationalOrganization",
+ "name":"바이써클 수학학원",
+ "alternateName":"바이써클 수학학원 · ERGO 학습 시스템",
+ "description":"인천 남동구 논현동 초·중·고 수학학원. 진단 기반 ERGO 학습 시스템(토킹매쓰 개념 설명, 유형 학습, 단계별 기출, 학교 시험지)과 매 수업 기록 공유.",
+ "telephone":"+82-10-7137-5884",
+ "address":{"@type":"PostalAddress","streetAddress":"청능대로 583 중앙프라자 801호","addressLocality":"남동구","addressRegion":"인천광역시","addressCountry":"KR"},
+ "areaServed":"인천 남동구 논현동",
+ "sameAs":["https://blog.naver.com/hsi5884"]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"ERGO 학습 시스템은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"아이가 '아는 것 같다'와 '설명할 수 있다'를 구분하도록 만든 바이써클 수학학원의 수업 방식입니다. 진단으로 막힌 지점을 찾고, 개념을 말로 설명하는 토킹매쓰, 유형 학습, 단계별 기출(Level 3·4·5), 학교 시험지 순서로 올라갑니다."}},
+  {"@type":"Question","name":"수업 진행 상황은 어떻게 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"매 수업의 숙제, 테스트, 재테스트 결과를 기록하고, 학부모님은 문자로 받은 링크에서 아이의 기록을 확인하실 수 있습니다. 피드백은 달라진 점, 근거, 다음 할 일 세 가지로 전해 드립니다."}},
+  {"@type":"Question","name":"서술형 평가는 어떻게 대비하나요?","acceptedAnswer":{"@type":"Answer","text":"객관식 문제를 주관식으로 바꿔 풀이 과정을 직접 쓰게 하고, 어디서 틀렸는지 원인을 찾아 같은 유형을 다시 확인합니다."}},
+  {"@type":"Question","name":"상담은 어떻게 신청하나요?","acceptedAnswer":{"@type":"Answer","text":"온라인 신청서(1분) 또는 전화·문자 010-7137-5884로 신청하실 수 있습니다. 방문 상담은 미리 연락 주시면 시간을 맞춰 드립니다."}}
+ ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><b>바이써클 수학학원</b><span>ERGO 학습 시스템</span></a>
+    <nav class="menu">
+      <a href="#ergo">ERGO 학습</a>
+      <a href="#parents">학부모 리포트</a>
+      <a href="#schools">학교별 분석</a>
+      <a href="#courses">수업 안내</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="#contact">오시는 길</a>
+    </nav>
+    <a class="btn btn-main" href="https://forms.gle/A4aLBfPEqvFQwLLo9" target="_blank" rel="noopener">상담 신청</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">인천 논현동 · 초·중·고 수학</span>
+      <h1>우리 아이 수학,<br><em>어디서 막혔는지</em>부터<br>찾습니다.</h1>
+      <p class="lead">같은 1시간을 공부해도, 막힌 지점을 알고 하는 공부와 모르고 하는 공부는 결과가 다릅니다. 바이써클은 진단으로 시작하고, 매 수업을 기록으로 남겨 학부모님께 보여드립니다.</p>
+      <div class="cta-row">
+        <a class="btn btn-main" href="https://forms.gle/A4aLBfPEqvFQwLLo9" target="_blank" rel="noopener">1분 상담 신청 →</a>
+        <a class="btn btn-ghost" href="tel:010-7137-5884">전화 010-7137-5884</a>
+      </div>
+      <p class="hero-note">상담은 아이를 평가하는 자리가 아니라, 지금 위치를 함께 확인하는 자리입니다.</p>
+    </div>
+    <div class="card-stack" aria-label="수업 기록 예시">
+      <h3>오늘 수업 기록 · 예시</h3>
+      <div class="rec"><b>숙제</b><span class="pill ok">다 해 왔어요</span></div>
+      <div class="rec"><b>유형 테스트 (2문항)</b><span class="pill ok">2/2 통과</span></div>
+      <div class="rec"><b>지난 시간 틀린 유형</b><span class="pill re">다음 수업 다시 확인</span></div>
+      <div class="rec"><b>단계</b><span class="pill info">기출 Level 4</span></div>
+      <div class="feedback">
+        <p><strong>달라진 점</strong> 일차함수 그래프 해석 문제를 혼자 끝까지 풀었어요.</p>
+        <p><strong>근거</strong> 지난주 0/2 → 이번 주 2/2</p>
+        <p><strong>다음 할 일</strong> 활용 문제 3문항으로 넘어갑니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div><b>진단부터</b>ERGO 학습역량 진단</div>
+    <div><b>설명할 수 있을 때까지</b>토킹매쓰 개념 수업</div>
+    <div><b>틀린 건 다시</b>숙제 · 테스트 · 재테스트</div>
+    <div><b>눈으로 확인</b>학부모 수업 기록 조회</div>
+  </div>
+</div>
+
+<!-- WORRIES -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">이런 고민이라면</span>
+    <h2>열심히 하는데, 왜 시험에서는 안 될까요?</h2>
+    <div class="worries">
+      <div class="worry">"아는 문제인데 시험만 보면 틀려요"<small>개념을 설명할 수 있는지부터 확인합니다.</small></div>
+      <div class="worry">"문제집은 많이 푸는데 점수가 그대로예요"<small>푼 양보다 막힌 유형을 찾는 게 먼저입니다.</small></div>
+      <div class="worry">"서술형에서 자꾸 감점돼요"<small>풀이 과정을 직접 쓰는 연습을 따로 합니다.</small></div>
+      <div class="worry">"학원에서 뭘 배우는지 모르겠어요"<small>매 수업 기록을 학부모님이 직접 보실 수 있습니다.</small></div>
+      <div class="worry">"혼자 공부하는 방법을 몰라요"<small>숙제 → 테스트 → 재테스트 루틴으로 습관을 만듭니다.</small></div>
+    </div>
+    <div class="answer">대부분은 '어디서 막혔는지'를 모른 채 문제만 더 푸는 데서 시작됩니다. 바이써클은 그 지점을 먼저 찾습니다.</div>
+  </div>
+</section>
+
+<!-- ERGO -->
+<section id="ergo" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">ERGO 학습 시스템</span>
+    <h2>'아는 것 같다'에서 '설명할 수 있다'까지</h2>
+    <p class="lead">ERGO 학습 시스템은 네 단계로 올라갑니다. 한 단계를 통과해야 다음 단계로 넘어가고, 통과하지 못한 유형은 다음 수업에서 다시 확인합니다.</p>
+    <div class="steps">
+      <div class="step"><h3>토킹매쓰</h3><p>개념을 아이가 자기 말로 설명합니다. 설명이 막히는 곳이 진짜 모르는 곳입니다.</p></div>
+      <div class="step"><h3>유형 학습</h3><p>유형마다 번호를 붙여 숙제와 테스트를 냅니다. 유형별 2문항을 모두 맞혀야 통과입니다.</p></div>
+      <div class="step"><h3>단계별 기출</h3><p>학교 기출을 난이도별 Level 3 · 4 · 5로 나눠 한 계단씩 올라갑니다.</p></div>
+      <div class="step"><h3>학교 시험지</h3><p>다니는 학교의 출제 경향에 맞춘 실전 모의고사로 마무리합니다.</p></div>
+    </div>
+    <div class="loop">
+      <h3>매 수업 이렇게 진행합니다</h3>
+      <div class="loop-row">
+        <span>숙제 검사</span><i>→</i><span>유형 테스트</span><i>→</i><span>선생님 피드백</span><i>→</i><span>재정리</span><i>→</i><span>다음 수업 재테스트</span>
+      </div>
+      <p>틀린 문제가 그대로 쌓이지 않도록, 실패한 유형만 골라 다음 수업에서 한 번 더 확인합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">바이써클에서만</span>
+    <h2>요즘 시험에 맞춘 세 가지</h2>
+    <div class="feat">
+      <div class="f">
+        <div class="ic" style="background:var(--blue-soft)">🧭</div>
+        <h3>ERGO 학습역량 진단</h3>
+        <p>점수만이 아니라 공부 습관, 아는 것과 모르는 것을 구분하는 힘, 시험 준비 방식까지 살펴봅니다.</p>
+        <ul><li>평균·등수 비교 대신 성장 단계로 안내</li><li>가정에서 함께할 2주 약속 체크리스트</li></ul>
+      </div>
+      <div class="f">
+        <div class="ic" style="background:var(--mint-soft)">✍️</div>
+        <h3>서술형 대비</h3>
+        <p>학교 평가에서 서술형 비중이 커지고 있습니다. 객관식 문제를 주관식으로 바꿔 풀이 과정을 직접 쓰게 합니다.</p>
+        <ul><li>틀린 이유(오답 원인)를 유형별로 기록</li><li>같은 유형으로 다시 확인</li></ul>
+      </div>
+      <div class="f">
+        <div class="ic" style="background:var(--sun-soft)">🏫</div>
+        <h3>학교별 시험 분석</h3>
+        <p>논현동 일대 중·고등학교의 시험지를 분석해 학교마다 다른 출제 경향에 맞춰 준비합니다.</p>
+        <ul><li>학교별 실전 모의고사</li><li>분석 내용은 블로그에 공개</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARENTS -->
+<section id="parents" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">학부모 리포트</span>
+    <h2>"학원에서 뭘 했는지" 링크 하나로 확인하세요</h2>
+    <p class="lead">문자로 받은 링크에 아이 이름과 조회 번호를 넣으면, 숙제 완료율, 테스트 정답률, 유형별 통과 현황, 최근 수업 기록을 보실 수 있습니다.</p>
+    <div class="report">
+      <div class="phone">
+        <div class="screen">
+          <h4>○○○ 학생 · 이번 달 기록 (예시)</h4>
+          <div style="font-size:13px;color:var(--sub)">숙제 완료율 92%</div>
+          <div class="bar"><i style="width:92%"></i></div>
+          <div style="font-size:13px;color:var(--sub)">테스트 정답률 81%</div>
+          <div class="bar"><i style="width:81%;background:var(--mint)"></i></div>
+          <div style="font-size:13px;color:var(--sub)">유형별 통과</div>
+          <div class="chips">
+            <span class="ok">일차함수 그래프</span><span class="ok">기울기</span><span class="re">활용 문제</span><span class="ok">연립방정식 해</span><span class="info">다음: 함수 활용</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:22px;margin-bottom:6px">피드백은 세 문장으로 드립니다</h3>
+        <p style="color:var(--sub)">긴 말 대신, 확인할 수 있는 사실로 전해 드립니다.</p>
+        <ul class="three">
+          <li><b>달라진 점</b>지난달과 비교해 무엇이 나아졌는지</li>
+          <li><b>근거</b>그렇게 말할 수 있는 테스트 결과와 기록</li>
+          <li><b>다음 할 일</b>다음 2주 동안 학원과 가정에서 할 일</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOLS -->
+<section id="schools">
+  <div class="wrap">
+    <span class="eyebrow">학교별 분석</span>
+    <h2>논현동 학교 시험, 학교마다 다르게 준비합니다</h2>
+    <p class="lead">블로그에 올리는 학교별 시험 분석을 상담과 수업에 그대로 활용합니다.</p>
+    <div class="schools">
+      <span>논현중</span><span>사리울중</span><span>남동고</span><span>논현고</span><span>송천고</span><span>고잔고</span>
+    </div>
+    <p style="margin-top:22px"><a class="btn btn-ghost" href="https://blog.naver.com/hsi5884" target="_blank" rel="noopener">블로그에서 학교별 분석 보기 →</a></p>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">수업 안내</span>
+    <h2>교습과목 및 교습비</h2>
+    <p class="lead">「학원의 설립·운영 및 과외교습에 관한 법률」 제15조 제3항에 따라 교육청에 등록한 교습비를 게시합니다.</p>
+    <table>
+      <thead><tr><th>교습과목</th><th>총 교습시간(분/월)</th><th>교습비(월)</th></tr></thead>
+      <tbody>
+        <tr><td>초등수학 1</td><td class="num">1,008</td><td class="num">180,000원</td></tr>
+        <tr><td>초등수학 2</td><td class="num">1,512</td><td class="num">270,000원</td></tr>
+        <tr><td>초등수학 3</td><td class="num">504</td><td class="num">90,000원</td></tr>
+        <tr><td>중등수학 1</td><td class="num">2,268</td><td class="num">330,000원</td></tr>
+        <tr><td>고등수학 2</td><td class="num">2,268</td><td class="num">410,000원</td></tr>
+        <tr><td>고등수학 3</td><td class="num">2,268</td><td class="num">430,000원</td></tr>
+      </tbody>
+    </table>
+    <p class="small">※ 교재비, 모의고사비 등 기타경비는 실비로 별도 안내합니다. ※ 교습비 반환은 학원법 시행령 기준에 따릅니다. <span class="todo">[게시 전 확인: 2026년 등록 교습비와 같은지]</span></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow">자주 묻는 질문</span>
+    <h2>학부모님이 많이 물어보시는 것</h2>
+    <div class="faq">
+      <details open><summary>ERGO 학습 시스템은 무엇인가요?</summary><p>아이가 '아는 것 같다'와 '설명할 수 있다'를 구분하도록 만든 바이써클의 수업 방식입니다. 진단으로 막힌 지점을 찾고, 토킹매쓰(개념 설명) → 유형 학습 → 단계별 기출(Level 3·4·5) → 학교 시험지 순서로 올라갑니다.</p></details>
+      <details><summary>수업 진행 상황은 어떻게 알 수 있나요?</summary><p>매 수업의 숙제, 테스트, 재테스트 결과를 기록합니다. 문자로 받은 링크에서 아이 이름과 조회 번호를 넣으면 기록을 보실 수 있고, 피드백은 '달라진 점, 근거, 다음 할 일' 세 문장으로 드립니다.</p></details>
+      <details><summary>서술형 평가는 어떻게 대비하나요?</summary><p>객관식 문제를 주관식으로 바꿔 풀이 과정을 직접 쓰게 합니다. 어디서 틀렸는지 원인을 기록하고, 같은 유형으로 다시 확인합니다.</p></details>
+      <details><summary>처음 오면 무엇부터 하나요?</summary><p>상담에서 지금 배우는 단원의 개념 설명과 유형 확인으로 막힌 지점을 찾고, 필요하면 ERGO 학습역량 진단을 함께 진행합니다. 결과를 바탕으로 시작 단계를 정합니다.</p></details>
+      <details><summary>상담은 어떻게 신청하나요?</summary><p>온라인 신청서(1분) 또는 전화·문자 010-7137-5884로 신청하실 수 있습니다. 방문 상담은 미리 연락 주시면 시간을 맞춰 드립니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:20px">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>상담 신청</h2>
+        <p style="margin-bottom:24px">신청서를 남겨 주시면 원장이 직접 연락드립니다.</p>
+        <div class="cta-row">
+          <a class="btn btn-main" href="https://forms.gle/A4aLBfPEqvFQwLLo9" target="_blank" rel="noopener">1분 상담 신청 →</a>
+          <a class="btn btn-ghost" href="sms:010-7137-5884">문자 보내기</a>
+        </div>
+      </div>
+      <ul class="info-list">
+        <li><b>전화</b><a href="tel:010-7137-5884">010-7137-5884</a></li>
+        <li><b>주소</b>인천 남동구 청능대로 583 중앙프라자 801호</li>
+        <li><b>지도</b><a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%20%EB%82%A8%EB%8F%99%EA%B5%AC%20%EC%B2%AD%EB%8A%A5%EB%8C%80%EB%A1%9C%20583" target="_blank" rel="noopener" style="text-decoration:underline">네이버 지도에서 보기</a></li>
+        <li><b>블로그</b><a href="https://blog.naver.com/hsi5884" target="_blank" rel="noopener" style="text-decoration:underline">blog.naver.com/hsi5884</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>바이써클 수학학원 · ERGO 학습 시스템</b></p>
+    <p>학원명 바이써클 수학학원 · 설립·운영자 황상인 · 학원 등록번호 인천동부교육지원청 제2098호 · 교습과목 초·중·고 수학</p>
+    <p>인천광역시 남동구 청능대로 583 중앙프라자 801호 · 010-7137-5884</p>
+    <p style="margin-top:8px">© 바이써클 수학학원</p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:010-7137-5884">전화</a>
+  <a class="sms" href="sms:010-7137-5884">문자</a>
+  <a class="apply" href="https://forms.gle/A4aLBfPEqvFQwLLo9" target="_blank" rel="noopener">상담 신청</a>
+</div>
+
+</body>
+</html>
