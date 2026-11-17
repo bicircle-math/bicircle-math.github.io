@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>바이써클 수학학원 · ERGO 학습 시스템 | 인천 논현동 초·중·고 수학</title>
-<meta name="description" content="인천 남동구 논현동 바이써클 수학학원. 진단으로 막힌 지점을 찾고, 개념 설명(토킹매쓰) → 유형 학습 → 단계별 기출 → 학교 시험지 순서로 올라가는 ERGO 학습 시스템.">
+<meta name="description" content="인천 남동구 논현동 바이써클 수학학원. 진단으로 막힌 지점을 찾고, 토킹매쓰(개념) → 유형학습 → 기출Level → 실전모의고사 순서로 올라가는 ERGO 학습 시스템. 숙제마다 학습 리포트, 학교별 시험 6주 계획.">
 <meta property="og:title" content="바이써클 수학학원 · ERGO 학습 시스템">
 <meta property="og:description" content="우리 아이 수학, 어디서 막혔는지부터 찾습니다. 인천 논현동 초·중·고 수학.">
 <meta property="og:type" content="website">
@@ -132,6 +132,22 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 .small{font-size:13.5px;color:var(--sub);margin-top:10px}
 .todo{background:#fff3bf;border-radius:6px;padding:1px 6px;font-weight:700;color:#8a6100}
 
+/* timetable */
+.tt{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.tt .t{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
+.tt .t h3{font-size:20px;margin-bottom:4px}
+.tt .t .who{font-size:13px;font-weight:800;color:var(--blue);letter-spacing:.04em}
+.tt .t ul{list-style:none;margin-top:12px}
+.tt .t li{padding:9px 0;border-top:1px dashed var(--line);font-size:15px}
+.tt .t li b{color:var(--navy);margin-right:6px}
+@media(max-width:860px){.tt{grid-template-columns:1fr}}
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.tracks div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:15px;color:var(--sub)}
+.tracks b{display:block;color:var(--navy);font-size:17px;margin-bottom:2px}
+@media(max-width:620px){.tracks{grid-template-columns:1fr}}
+.rp{list-style:none;margin-top:16px}
+.rp li{display:flex;gap:10px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px}
+.rp li i{font-style:normal;flex:0 0 26px;height:26px;border-radius:50%;background:var(--blue-soft);color:var(--blue);font-weight:800;font-size:13px;display:grid;place-items:center}
 /* faq */
 .faq{margin-top:30px}
 details{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:10px;background:#fff}
@@ -168,7 +184,8 @@ footer b{color:var(--navy)}
  "@type":"EducationalOrganization",
  "name":"바이써클 수학학원",
  "alternateName":"바이써클 수학학원 · ERGO 학습 시스템",
- "description":"인천 남동구 논현동 초·중·고 수학학원. 진단 기반 ERGO 학습 시스템(토킹매쓰 개념 설명, 유형 학습, 단계별 기출, 학교 시험지).",
+ "description":"인천 남동구 논현동 초·중·고 수학학원. ERGO 학습 시스템(토킹매쓰 개념, 유형학습, 기출Level, 실전모의고사), 실력별 3트랙, 숙제마다 학습 리포트.",
+ "openingHours":["Mo-Fr 15:00-22:00","Sa 12:00-18:00"],
  "telephone":"+82-10-7137-5884",
  "address":{"@type":"PostalAddress","streetAddress":"청능대로 583 중앙프라자 801호","addressLocality":"남동구","addressRegion":"인천광역시","addressCountry":"KR"},
  "areaServed":"인천 남동구 논현동",
@@ -177,13 +194,193 @@ footer b{color:var(--navy)}
 </script>
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"FAQPage",
- "mainEntity":[
-  {"@type":"Question","name":"ERGO 학습 시스템은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"아이가 '아는 것 같다'와 '설명할 수 있다'를 구분하도록 만든 바이써클 수학학원의 수업 방식입니다. 진단으로 막힌 지점을 찾고, 개념을 말로 설명하는 토킹매쓰, 유형 학습, 단계별 기출(Level 3·4·5), 학교 시험지 순서로 올라갑니다."}},
-  {"@type":"Question","name":"수업 진행 상황은 어떻게 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"지금은 상담과 문자로 진행 상황을 안내해 드립니다. 수업마다 숙제, 테스트, 재테스트 결과를 기록해 학부모님이 링크로 확인하시는 수업 기록 시스템을 준비하고 있으며, 완성되는 대로 재원생 학부모님께 안내드립니다."}},
-  {"@type":"Question","name":"서술형 평가는 어떻게 대비하나요?","acceptedAnswer":{"@type":"Answer","text":"객관식 문제를 주관식으로 바꿔 풀이 과정을 직접 쓰게 하고, 어디서 틀렸는지 원인을 찾아 같은 유형을 다시 확인합니다."}},
-  {"@type":"Question","name":"상담은 어떻게 신청하나요?","acceptedAnswer":{"@type":"Answer","text":"온라인 신청서(1분) 또는 전화·문자 010-7137-5884로 신청하실 수 있습니다. 방문 상담은 미리 연락 주시면 시간을 맞춰 드립니다."}}
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "수업은 어떻게 진행되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "같은 단원을 하는 학생은 개념을 함께 배우고, 문제 풀이는 학생마다 자기 진도로 하는 개별 진도 수업입니다. 교실마다 담당 선생님이 수업하고, 원장도 함께 수업에 들어갑니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "한 교실에서 어떻게 공부하나요? 학년이 섞여 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "학년별 반이 아니라, 한 교실에서 학생마다 자기 수준·진도의 교재로 공부하는 개별 진도 수업이에요. 같은 단원을 하는 학생은 모아서 개념을 함께 설명하고, 문제는 각자 풀며 선생님이 한 명씩 확인해요. 그래서 학년보다 지금 실력에 맞춰 시작할 수 있어요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "수업 시간표가 어떻게 되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "중등은 월·수·금 오후 4~7시 또는 화·목 오후 4~7시와 토요일(낮 12시~오후 5시 사이 3시간) 중에서 다닙니다. 고등은 같은 요일 저녁 7~10시입니다. 초등은 월~금 중 주 2회를 골라 2시간(오후 3~5시 또는 4~6시) 수업합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "요일이나 시간을 바꿀 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "중등·고등은 한 주에 하루는 요일을 바꿀 수 있습니다. 학교 일정 등 특별한 사정이 있으면 원장과 상의해 시간을 조정합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "결석하면 보강이 되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "네. 학생과 일정을 의논해 보강합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "누가 가르치나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "교실마다 담당 선생님이 가르치고, 원장이 함께 수업하며 학생별 진도와 결과를 직접 확인합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "교재는 무엇을 쓰나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "모든 교재는 원장이 직접 만든 ERGO 교재입니다. 토킹매쓰(개념) → 유형학습 → 기출Level 3·4·5 → 실전모의고사 순서로 이어집니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "실력이 다른 아이들이 같이 수업해도 괜찮나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "같은 반이라도 실력에 따라 기본·표준·상위 3트랙으로 푸는 교재가 다릅니다. 2주마다 결과를 보고 트랙을 다시 정하기 때문에, 잘하면 올라가고 막히면 앞 단계부터 다시 채웁니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "수학을 많이 어려워하는 아이도 따라갈 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "네. 기본 트랙에서 개념을 자기 말로 설명하는 것부터 시작합니다. 막힌 유형은 확인테스트로 통과할 때까지 다시 봅니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "숙제는 얼마나 나오고, 어떻게 관리하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "실력에 맞는 난이도로 하루 30~50문제 정도입니다. 숙제는 단원별 프린트로 나갑니다. 프린트 하나를 끝낼 때마다 결과를 분석해서, 틀린 유형만 다시 확인하고 약한 유형으로 만든 복습지를 따로 풀게 합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "아이가 잘하고 있는지 어떻게 알 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "숙제 하나를 끝낼 때마다 학습 리포트를 카카오톡 사진으로 보내 드립니다. 지금까지의 흐름, 이번 결과, 잘한 점과 더 연습할 점, 다음 계획을 한눈에 보실 수 있습니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "학부모 상담은 얼마나 자주 하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "숙제마다 분석 리포트를 보내 드리고, 상담은 필요할 때마다, 그리고 시험 때마다 합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "학교 시험은 어떻게 준비하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "학교별 시험 일정과 범위를 확인해 시험 6주 전부터 계획표대로 준비합니다. 개념 → 유형 → 기출Level → 실전모의고사 순서로 올라가고, 마지막 3일은 새 문제 없이 내가 틀린 문제만 다시 풉니다. 시험 기간에도 정규 수업 시간에 이 계획대로 준비합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "서술형과 수행평가는 어떻게 대비하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "풀이 과정을 직접 쓰는 연습을 따로 합니다. 수행평가 범위가 나오면 교과서 풀이 흐름에 맞춘 대비 프린트와 모범 답안으로 준비합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "처음 오면 무엇부터 하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "상담을 신청하시면 원장이 연락드립니다. 상담에서 지금 배우는 단원과 막힌 지점을 확인하고 시작 단계와 트랙을 정합니다. 원하시면 ERGO 학습심리검사(1만 원)도 받아 보실 수 있어요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "ERGO 학습심리검사는 무엇인가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "점수만이 아니라 공부 습관, 아는 것과 모르는 것을 구분하는 힘, 시험 준비 방식을 살펴보는 검사입니다. 원하시는 분만 받는 선택 검사이고, 검사비는 1만 원입니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "체험 수업을 해 볼 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "네. 원하시면 1시간 정도 체험 수업을 해 볼 수 있어요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "수업이 끝난 뒤 남아서 공부할 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "수업이 3시간이라 따로 남는 경우는 거의 없어요. 필요하면 학원에서 더 남아 공부하도록 봐 드립니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "다른 학원에 다니다 옮겨도 적응할 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "문제 풀이는 각자 진도로 하기 때문에 중간에 시작해도 괜찮습니다. 상담에서 막힌 지점을 먼저 찾고, 거기서부터 시작합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "교습비는 얼마인가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "교육청에 등록한 교습비는 초등수학 1 월 180,000원, 초등수학 2 월 270,000원, 중등수학 1 월 330,000원, 고등수학 2 월 410,000원, 고등수학 3 월 430,000원입니다. 교재비는 실비로 한 달 1만~2만 원 정도입니다. 형제 할인이 있고, 금액은 상담 때 안내드려요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "차량 운행을 하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "차량은 운행하지 않아요. 인천논현역 4번 출구 바로 앞, 서브웨이·우리은행이 있는 중앙프라자 8층이라 걸어서 오기 편해요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "어느 학교 학생들이 다니나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "논현동 일대 중학교(논현중, 동방중, 고잔중, 사리울중)와 고등학교(남동고, 논현고, 송천고, 고잔고) 학생들이 다닙니다. 시험 범위와 일정은 학교별로 확인합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "상담은 어떻게 신청하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "온라인 신청서(1분) 또는 전화·문자 010-7137-5884로 신청하실 수 있습니다. 방문 상담은 미리 연락 주시면 시간을 맞춰 드립니다."
+   }
+  }
  ]
 }
 </script>
@@ -195,9 +392,10 @@ footer b{color:var(--navy)}
     <a href="#top" class="logo"><b>바이써클 수학학원</b><span>ERGO 학습 시스템</span></a>
     <nav class="menu">
       <a href="#ergo">ERGO 학습</a>
-      <a href="#parents">학부모 리포트</a>
-      <a href="#schools">학교 기출</a>
-      <a href="#courses">수업 안내</a>
+      <a href="#parents">학습 리포트</a>
+      <a href="#schools">학교 시험</a>
+      <a href="#time">시간표</a>
+      <a href="#courses">교습비</a>
       <a href="#faq">자주 묻는 질문</a>
       <a href="#contact">오시는 길</a>
     </nav>
@@ -216,14 +414,14 @@ footer b{color:var(--navy)}
       <p class="lead">같은 1시간을 공부해도, 막힌 지점을 알고 하는 공부와 모르고 하는 공부는 결과가 다릅니다. 바이써클은 진단으로 시작해 막힌 지점부터 찾습니다.</p>
       <div class="cta-row">
         <a class="btn btn-main" href="https://forms.gle/A4aLBfPEqvFQwLLo9" target="_blank" rel="noopener">1분 상담 신청 →</a>
-        <a class="btn btn-ghost" href="tel:010-7137-5884">전화 010-7137-5884</a>
+        <a class="btn btn-ghost" href="consult.html">학원 안내 한눈에 보기</a>
       </div>
       <p class="hero-note">상담은 아이를 평가하는 자리가 아니라, 지금 위치를 함께 확인하는 자리입니다.</p>
     </div>
-    <div class="card-stack" aria-label="수업 기록 예시">
-      <h3>수업 기록 화면 예시 <span class="pill re" style="margin-left:6px">준비 중</span></h3>
-      <div class="rec"><b>숙제</b><span class="pill ok">다 해 왔어요</span></div>
-      <div class="rec"><b>유형 테스트 (2문항)</b><span class="pill ok">2/2 통과</span></div>
+    <div class="card-stack" aria-label="학습 리포트 예시">
+      <h3>학습 리포트 예시 <span class="pill info" style="margin-left:6px">숙제마다</span></h3>
+      <div class="rec"><b>숙제 프린트</b><span class="pill ok">끝까지 완료</span></div>
+      <div class="rec"><b>확인테스트</b><span class="pill ok">통과</span></div>
       <div class="rec"><b>지난 시간 틀린 유형</b><span class="pill re">다음 수업 다시 확인</span></div>
       <div class="rec"><b>단계</b><span class="pill info">기출 Level 4</span></div>
       <div class="feedback">
@@ -238,10 +436,10 @@ footer b{color:var(--navy)}
 <!-- STRIP -->
 <div class="strip">
   <div class="wrap strip-grid">
-    <div><b>진단부터</b>ERGO 학습역량 진단</div>
+    <div><b>막힌 곳부터</b>상담으로 시작 단계 결정</div>
     <div><b>설명할 수 있을 때까지</b>토킹매쓰 개념 수업</div>
     <div><b>틀린 건 다시</b>숙제 · 테스트 · 재테스트</div>
-    <div><b>눈으로 확인</b>학부모 수업 기록 조회 (준비 중)</div>
+    <div><b>숙제마다</b>학습 리포트 · 복습지</div>
   </div>
 </div>
 
@@ -254,7 +452,7 @@ footer b{color:var(--navy)}
       <div class="worry">"아는 문제인데 시험만 보면 틀려요"<small>개념을 설명할 수 있는지부터 확인합니다.</small></div>
       <div class="worry">"문제집은 많이 푸는데 점수가 그대로예요"<small>푼 양보다 막힌 유형을 찾는 게 먼저입니다.</small></div>
       <div class="worry">"서술형에서 자꾸 감점돼요"<small>풀이 과정을 직접 쓰는 연습을 따로 합니다.</small></div>
-      <div class="worry">"학원에서 뭘 배우는지 모르겠어요"<small>수업 기록을 학부모님이 직접 보실 수 있도록 준비하고 있습니다.</small></div>
+      <div class="worry">"학원에서 뭘 배우는지 모르겠어요"<small>숙제 하나 끝날 때마다 학습 리포트를 보내 드립니다.</small></div>
       <div class="worry">"혼자 공부하는 방법을 몰라요"<small>숙제 → 테스트 → 재테스트 루틴으로 습관을 만듭니다.</small></div>
     </div>
     <div class="answer">대부분은 '어디서 막혔는지'를 모른 채 문제만 더 푸는 데서 시작됩니다. 바이써클은 그 지점을 먼저 찾습니다.</div>
@@ -266,19 +464,24 @@ footer b{color:var(--navy)}
   <div class="wrap">
     <span class="eyebrow">ERGO 학습 시스템</span>
     <h2>'아는 것 같다'에서 '설명할 수 있다'까지</h2>
-    <p class="lead">ERGO 학습 시스템은 네 단계로 올라갑니다. 한 단계를 통과해야 다음 단계로 넘어가고, 통과하지 못한 유형은 다음 수업에서 다시 확인합니다.</p>
+    <p class="lead">ERGO 학습 시스템은 네 단계로 올라갑니다. 교재는 모두 원장이 직접 만들었습니다. 같은 반이라도 실력에 따라 기본 · 표준 · 상위 3트랙으로 푸는 교재가 다르고, 2주마다 결과를 보고 트랙을 다시 정합니다.</p>
     <div class="steps">
       <div class="step"><h3>토킹매쓰</h3><p>개념을 아이가 자기 말로 설명합니다. 설명이 막히는 곳이 진짜 모르는 곳입니다.</p></div>
-      <div class="step"><h3>유형 학습</h3><p>유형마다 번호를 붙여 숙제와 테스트를 냅니다. 유형별 2문항을 모두 맞혀야 통과입니다.</p></div>
-      <div class="step"><h3>단계별 기출</h3><p>학교 기출을 난이도별 Level 3 · 4 · 5로 나눠 한 계단씩 올라갑니다.</p></div>
-      <div class="step"><h3>학교 시험지</h3><p>실제 학교 기출로 만든 실전 모의고사로 시험 형식과 시간에 익숙해집니다.</p></div>
+      <div class="step"><h3>유형학습</h3><p>시험에 나오는 유형을 빠짐없이 풀고, 유형마다 확인테스트로 통과 여부를 봅니다.</p></div>
+      <div class="step"><h3>기출Level</h3><p>시험에 나오는 문제를 난이도별 Level 3 · 4 · 5로 나눠 한 계단씩 올라갑니다.</p></div>
+      <div class="step"><h3>실전모의고사</h3><p>시험 직전, 실제 시험처럼 시간을 재고 풀어 형식과 시간에 익숙해집니다.</p></div>
     </div>
     <div class="loop">
-      <h3>수업 루틴 <span class="pill re" style="margin-left:6px;vertical-align:middle">새 기록 시스템과 함께 준비 중</span></h3>
+      <h3>수업 루틴</h3>
       <div class="loop-row">
         <span>숙제 검사</span><i>→</i><span>유형 테스트</span><i>→</i><span>선생님 피드백</span><i>→</i><span>재정리</span><i>→</i><span>다음 수업 재테스트</span>
       </div>
-      <p>틀린 문제가 그대로 쌓이지 않도록, 실패한 유형만 골라 다음 수업에서 한 번 더 확인하는 루틴입니다. 수업 기록 시스템이 완성되는 대로 이 순서로 운영합니다.</p>
+      <p>틀린 문제가 그대로 쌓이지 않도록, 통과하지 못한 유형만 골라 다음 수업에서 한 번 더 확인합니다.</p>
+    </div>
+    <div class="tracks">
+      <div><b>기본 트랙</b>개념을 말로 설명하는 것부터 차근차근</div>
+      <div><b>표준 트랙</b>유형학습 + 기출 Level 3 · 4</div>
+      <div><b>상위 트랙</b>못 넘은 유형만 빠르게, Level 5와 실전</div>
     </div>
   </div>
 </section>
@@ -291,21 +494,21 @@ footer b{color:var(--navy)}
     <div class="feat">
       <div class="f">
         <div class="ic" style="background:var(--blue-soft)">🧭</div>
-        <h3>ERGO 학습역량 진단</h3>
+        <h3>ERGO 학습심리검사</h3>
         <p>점수만이 아니라 공부 습관, 아는 것과 모르는 것을 구분하는 힘, 시험 준비 방식까지 살펴봅니다.</p>
-        <ul><li>평균·등수 비교 대신 성장 단계로 안내</li><li>가정에서 함께할 2주 약속 체크리스트</li></ul>
+        <ul><li>평균·등수 비교 대신 성장 단계로 안내</li><li>원하시는 분만 받는 선택 검사 (1만 원)</li></ul>
       </div>
       <div class="f">
         <div class="ic" style="background:var(--mint-soft)">✍️</div>
         <h3>서술형 대비</h3>
-        <p>학교 평가에서 서술형 비중이 커지고 있습니다. 객관식 문제를 주관식으로 바꿔 풀이 과정을 직접 쓰게 합니다.</p>
-        <ul><li>틀린 이유(오답 원인)를 유형별로 기록</li><li>같은 유형으로 다시 확인</li></ul>
+        <p>학교 평가에서 서술형 비중이 커지고 있습니다. 풀이 과정을 직접 쓰는 연습을 따로 합니다.</p>
+        <ul><li>수행평가 범위에 맞춘 대비 프린트</li><li>교과서 풀이 흐름대로 모범 답안</li></ul>
       </div>
       <div class="f">
         <div class="ic" style="background:var(--sun-soft)">🏫</div>
-        <h3>학교 기출 분석</h3>
-        <p>논현동 일대 중·고등학교 기출을 분석해 자주 나오는 유형과 서술형을 정리합니다.</p>
-        <ul><li>실제 기출로 만든 실전 모의고사</li><li>분석 내용은 블로그에 공개</li></ul>
+        <h3>학교별 6주 계획</h3>
+        <p>학교별 시험 일정과 범위를 확인해 시험 6주 전부터 계획표대로 준비합니다.</p>
+        <ul><li>시험 경향에 맞춘 실전모의고사</li><li>마지막 3일은 내가 틀린 문제만</li></ul>
       </div>
     </div>
   </div>
@@ -314,31 +517,32 @@ footer b{color:var(--navy)}
 <!-- PARENTS -->
 <section id="parents" class="alt">
   <div class="wrap">
-    <span class="eyebrow">학부모 리포트 · 준비 중</span>
-    <h2>"학원에서 뭘 했는지" 링크 하나로 확인하실 수 있게 준비하고 있습니다</h2>
-    <p class="lead">문자로 받은 링크에 아이 이름과 조회 번호를 넣으면 숙제 완료율, 테스트 정답률, 유형별 통과 현황, 최근 수업 기록을 보실 수 있는 화면입니다. 완성되는 대로 재원생 학부모님께 먼저 안내드립니다.</p>
+    <span class="eyebrow">학습 리포트</span>
+    <h2>숙제 하나 끝날 때마다, 결과를 보내 드립니다</h2>
+    <p class="lead">한 달에 한 번 몰아서 보면 약점은 이미 굳어진 뒤입니다. 바이써클은 숙제 프린트 하나를 끝낼 때마다 분석해서 학부모님께 카카오톡으로 학습 리포트를 보내 드립니다.</p>
     <div class="report">
       <div class="phone">
         <div class="screen">
-          <h4>○○○ 학생 · 이번 달 기록 (예시)</h4>
-          <div style="font-size:13px;color:var(--sub)">숙제 완료율 92%</div>
-          <div class="bar"><i style="width:92%"></i></div>
-          <div style="font-size:13px;color:var(--sub)">테스트 정답률 81%</div>
-          <div class="bar"><i style="width:81%;background:var(--mint)"></i></div>
-          <div style="font-size:13px;color:var(--sub)">유형별 통과</div>
+          <h4>○○○ 학생 · 학습 리포트 (예시)</h4>
+          <div style="font-size:13px;color:var(--sub)">이번 단원 정답률 89%</div>
+          <div class="bar"><i style="width:89%"></i></div>
+          <div style="font-size:13px;color:var(--sub)">단계 달성도</div>
+          <div class="bar"><i style="width:76%;background:var(--mint)"></i></div>
+          <div style="font-size:13px;color:var(--sub)">유형별 결과</div>
           <div class="chips">
-            <span class="ok">일차함수 그래프</span><span class="ok">기울기</span><span class="re">활용 문제</span><span class="ok">연립방정식 해</span><span class="info">다음: 함수 활용</span>
+            <span class="ok">다면체</span><span class="ok">회전체</span><span class="re">정다면체</span><span class="ok">기둥의 겉넓이</span><span class="info">다음: 기출 Level 3</span>
           </div>
         </div>
       </div>
       <div>
-        <h3 style="font-size:22px;margin-bottom:6px">피드백은 세 문장으로 드립니다</h3>
-        <p style="color:var(--sub)">긴 말 대신, 확인할 수 있는 사실로 전해 드립니다.</p>
-        <ul class="three">
-          <li><b>달라진 점</b>지난달과 비교해 무엇이 나아졌는지</li>
-          <li><b>근거</b>그렇게 말할 수 있는 테스트 결과와 기록</li>
-          <li><b>다음 할 일</b>다음 2주 동안 학원과 가정에서 할 일</li>
+        <h3 style="font-size:22px;margin-bottom:6px">리포트에서 보실 수 있는 것</h3>
+        <ul class="rp">
+          <li><i>1</i><span><b>지금까지의 흐름</b> 어떤 단원을 거쳐 여기까지 왔는지</span></li>
+          <li><i>2</i><span><b>이번 결과</b> 단원별 정답률과 단계 달성도</span></li>
+          <li><i>3</i><span><b>잘한 점과 더 연습할 점</b> 사실로 짧게</span></li>
+          <li><i>4</i><span><b>다음 계획</b> 다음 수업에서 무엇을 하는지</span></li>
         </ul>
+        <p class="small" style="font-size:14.5px">학생에게는 약한 유형만 모은 복습지를 따로 인쇄해 풀게 합니다.</p>
       </div>
     </div>
   </div>
@@ -347,13 +551,31 @@ footer b{color:var(--navy)}
 <!-- SCHOOLS -->
 <section id="schools">
   <div class="wrap">
-    <span class="eyebrow">학교 기출</span>
-    <h2>논현동 학교 기출, 직접 풀어 보고 준비합니다</h2>
-    <p class="lead">논현동 중·고등학교 시험은 출제 방식이 크게 다르지 않습니다. 그래서 실제 학교 기출 문제로 시험 형식과 서술형에 익숙해지는 데 집중하고, 시험 범위와 일정은 학교별로 확인합니다.</p>
+    <span class="eyebrow">학교 시험</span>
+    <h2>학교별 범위와 일정에 맞춰 준비합니다</h2>
+    <p class="lead">논현동 중·고등학교 시험은 출제 방식이 크게 다르지 않습니다. 그래서 시험 형식과 서술형에 익숙해지는 데 집중하고, 시험 범위와 일정은 학교별로 확인해 6주 계획을 세웁니다.</p>
     <div class="schools">
       <span>논현중</span><span>동방중</span><span>고잔중</span><span>사리울중</span><span>남동고</span><span>논현고</span><span>송천고</span><span>고잔고</span>
     </div>
-    <p style="margin-top:22px"><a class="btn btn-ghost" href="https://blog.naver.com/hsi5884" target="_blank" rel="noopener">블로그에서 기출 분석 보기 →</a></p>
+    <p style="margin-top:22px"><a class="btn btn-ghost" href="https://blog.naver.com/hsi5884" target="_blank" rel="noopener">블로그에서 학교 시험 정보 보기 →</a></p>
+  </div>
+</section>
+
+<!-- TIMETABLE -->
+<section id="time">
+  <div class="wrap">
+    <span class="eyebrow">수업 시간표</span>
+    <h2>수업 시간 안내</h2>
+    <p class="lead">학년별 반이 아니라, 한 교실에서 학생마다 자기 수준·진도의 교재로 공부하는 개별 진도 수업입니다. 같은 단원을 하는 학생은 모아서 개념을 함께 설명하고, 문제는 각자 풀며 선생님이 한 명씩 확인합니다. 원장도 함께 수업합니다.</p>
+    <div class="tt">
+      <div class="t"><span class="who">초등</span><h3>주 2회 · 2시간</h3>
+        <ul><li><b>요일</b>월~금 중 2일 선택</li><li><b>시간</b>오후 3~5시 또는 4~6시</li></ul></div>
+      <div class="t"><span class="who">중등</span><h3>주 3회 · 3시간</h3>
+        <ul><li><b>A</b>월 · 수 · 금 오후 4~7시</li><li><b>B</b>화 · 목 오후 4~7시 + 토요일 (낮 12시~오후 5시 사이 3시간)</li></ul></div>
+      <div class="t"><span class="who">고등</span><h3>주 3회 · 3시간</h3>
+        <ul><li><b>A</b>월 · 수 · 금 저녁 7~10시</li><li><b>B</b>화 · 목 저녁 7~10시 + 토요일</li></ul></div>
+    </div>
+    <p class="small" style="font-size:14.5px">중등·고등은 한 주에 하루 요일을 바꿀 수 있습니다. 결석하면 학생과 의논해 보강합니다. 시험 기간에도 정규 수업 시간에 학교별 6주 계획대로 준비합니다. 차량은 운행하지 않고, 인천논현역 4번 출구 바로 앞(서브웨이·우리은행 건물)이라 걸어서 오기 편해요.</p>
   </div>
 </section>
 
@@ -381,12 +603,31 @@ footer b{color:var(--navy)}
 <section id="faq">
   <div class="wrap">
     <span class="eyebrow">자주 묻는 질문</span>
-    <h2>학부모님이 많이 물어보시는 것</h2>
+    <h2>학부모님이 상담 때 많이 물어보시는 것</h2>
+    <p class="lead">상담 전에 미리 읽어 보시면, 상담 시간에는 우리 아이 이야기에 더 집중할 수 있습니다.</p>
     <div class="faq">
-      <details open><summary>ERGO 학습 시스템은 무엇인가요?</summary><p>아이가 '아는 것 같다'와 '설명할 수 있다'를 구분하도록 만든 바이써클의 수업 방식입니다. 진단으로 막힌 지점을 찾고, 토킹매쓰(개념 설명) → 유형 학습 → 단계별 기출(Level 3·4·5) → 학교 시험지 순서로 올라갑니다.</p></details>
-      <details><summary>수업 진행 상황은 어떻게 알 수 있나요?</summary><p>지금은 상담과 문자로 진행 상황을 안내해 드립니다. 수업마다 숙제, 테스트, 재테스트 결과를 기록해 링크로 확인하시는 수업 기록 시스템을 준비하고 있고, 완성되는 대로 재원생 학부모님께 안내드립니다.</p></details>
-      <details><summary>서술형 평가는 어떻게 대비하나요?</summary><p>객관식 문제를 주관식으로 바꿔 풀이 과정을 직접 쓰게 합니다. 어디서 틀렸는지 원인을 기록하고, 같은 유형으로 다시 확인합니다.</p></details>
-      <details><summary>처음 오면 무엇부터 하나요?</summary><p>상담에서 지금 배우는 단원의 개념 설명과 유형 확인으로 막힌 지점을 찾고, 필요하면 ERGO 학습역량 진단을 함께 진행합니다. 결과를 바탕으로 시작 단계를 정합니다.</p></details>
+      <details open><summary>수업은 어떻게 진행되나요?</summary><p>같은 단원을 하는 학생은 개념을 함께 배우고, 문제 풀이는 학생마다 자기 진도로 하는 개별 진도 수업입니다. 교실마다 담당 선생님이 수업하고, 원장도 함께 수업에 들어갑니다.</p></details>
+      <details><summary>한 교실에서 어떻게 공부하나요? 학년이 섞여 있나요?</summary><p>학년별 반이 아니라, 한 교실에서 학생마다 자기 수준·진도의 교재로 공부하는 개별 진도 수업이에요. 같은 단원을 하는 학생은 모아서 개념을 함께 설명하고, 문제는 각자 풀며 선생님이 한 명씩 확인해요. 그래서 학년보다 지금 실력에 맞춰 시작할 수 있어요.</p></details>
+      <details><summary>수업 시간표가 어떻게 되나요?</summary><p>중등은 월·수·금 오후 4~7시 또는 화·목 오후 4~7시와 토요일(낮 12시~오후 5시 사이 3시간) 중에서 다닙니다. 고등은 같은 요일 저녁 7~10시입니다. 초등은 월~금 중 주 2회를 골라 2시간(오후 3~5시 또는 4~6시) 수업합니다.</p></details>
+      <details><summary>요일이나 시간을 바꿀 수 있나요?</summary><p>중등·고등은 한 주에 하루는 요일을 바꿀 수 있습니다. 학교 일정 등 특별한 사정이 있으면 원장과 상의해 시간을 조정합니다.</p></details>
+      <details><summary>결석하면 보강이 되나요?</summary><p>네. 학생과 일정을 의논해 보강합니다.</p></details>
+      <details><summary>누가 가르치나요?</summary><p>교실마다 담당 선생님이 가르치고, 원장이 함께 수업하며 학생별 진도와 결과를 직접 확인합니다.</p></details>
+      <details><summary>교재는 무엇을 쓰나요?</summary><p>모든 교재는 원장이 직접 만든 ERGO 교재입니다. 토킹매쓰(개념) → 유형학습 → 기출Level 3·4·5 → 실전모의고사 순서로 이어집니다.</p></details>
+      <details><summary>실력이 다른 아이들이 같이 수업해도 괜찮나요?</summary><p>같은 반이라도 실력에 따라 기본·표준·상위 3트랙으로 푸는 교재가 다릅니다. 2주마다 결과를 보고 트랙을 다시 정하기 때문에, 잘하면 올라가고 막히면 앞 단계부터 다시 채웁니다.</p></details>
+      <details><summary>수학을 많이 어려워하는 아이도 따라갈 수 있나요?</summary><p>네. 기본 트랙에서 개념을 자기 말로 설명하는 것부터 시작합니다. 막힌 유형은 확인테스트로 통과할 때까지 다시 봅니다.</p></details>
+      <details><summary>숙제는 얼마나 나오고, 어떻게 관리하나요?</summary><p>실력에 맞는 난이도로 하루 30~50문제 정도입니다. 숙제는 단원별 프린트로 나갑니다. 프린트 하나를 끝낼 때마다 결과를 분석해서, 틀린 유형만 다시 확인하고 약한 유형으로 만든 복습지를 따로 풀게 합니다.</p></details>
+      <details><summary>아이가 잘하고 있는지 어떻게 알 수 있나요?</summary><p>숙제 하나를 끝낼 때마다 학습 리포트를 카카오톡 사진으로 보내 드립니다. 지금까지의 흐름, 이번 결과, 잘한 점과 더 연습할 점, 다음 계획을 한눈에 보실 수 있습니다.</p></details>
+      <details><summary>학부모 상담은 얼마나 자주 하나요?</summary><p>숙제마다 분석 리포트를 보내 드리고, 상담은 필요할 때마다, 그리고 시험 때마다 합니다.</p></details>
+      <details><summary>학교 시험은 어떻게 준비하나요?</summary><p>학교별 시험 일정과 범위를 확인해 시험 6주 전부터 계획표대로 준비합니다. 개념 → 유형 → 기출Level → 실전모의고사 순서로 올라가고, 마지막 3일은 새 문제 없이 내가 틀린 문제만 다시 풉니다. 시험 기간에도 정규 수업 시간에 이 계획대로 준비합니다.</p></details>
+      <details><summary>서술형과 수행평가는 어떻게 대비하나요?</summary><p>풀이 과정을 직접 쓰는 연습을 따로 합니다. 수행평가 범위가 나오면 교과서 풀이 흐름에 맞춘 대비 프린트와 모범 답안으로 준비합니다.</p></details>
+      <details><summary>처음 오면 무엇부터 하나요?</summary><p>상담을 신청하시면 원장이 연락드립니다. 상담에서 지금 배우는 단원과 막힌 지점을 확인하고 시작 단계와 트랙을 정합니다. 원하시면 ERGO 학습심리검사(1만 원)도 받아 보실 수 있어요.</p></details>
+      <details><summary>ERGO 학습심리검사는 무엇인가요?</summary><p>점수만이 아니라 공부 습관, 아는 것과 모르는 것을 구분하는 힘, 시험 준비 방식을 살펴보는 검사입니다. 원하시는 분만 받는 선택 검사이고, 검사비는 1만 원입니다.</p></details>
+      <details><summary>체험 수업을 해 볼 수 있나요?</summary><p>네. 원하시면 1시간 정도 체험 수업을 해 볼 수 있어요.</p></details>
+      <details><summary>수업이 끝난 뒤 남아서 공부할 수 있나요?</summary><p>수업이 3시간이라 따로 남는 경우는 거의 없어요. 필요하면 학원에서 더 남아 공부하도록 봐 드립니다.</p></details>
+      <details><summary>다른 학원에 다니다 옮겨도 적응할 수 있나요?</summary><p>문제 풀이는 각자 진도로 하기 때문에 중간에 시작해도 괜찮습니다. 상담에서 막힌 지점을 먼저 찾고, 거기서부터 시작합니다.</p></details>
+      <details><summary>교습비는 얼마인가요?</summary><p>교육청에 등록한 교습비는 초등수학 1 월 180,000원, 초등수학 2 월 270,000원, 중등수학 1 월 330,000원, 고등수학 2 월 410,000원, 고등수학 3 월 430,000원입니다. 교재비는 실비로 한 달 1만~2만 원 정도입니다. 형제 할인이 있고, 금액은 상담 때 안내드려요.</p></details>
+      <details><summary>차량 운행을 하나요?</summary><p>차량은 운행하지 않아요. 인천논현역 4번 출구 바로 앞, 서브웨이·우리은행이 있는 중앙프라자 8층이라 걸어서 오기 편해요.</p></details>
+      <details><summary>어느 학교 학생들이 다니나요?</summary><p>논현동 일대 중학교(논현중, 동방중, 고잔중, 사리울중)와 고등학교(남동고, 논현고, 송천고, 고잔고) 학생들이 다닙니다. 시험 범위와 일정은 학교별로 확인합니다.</p></details>
       <details><summary>상담은 어떻게 신청하나요?</summary><p>온라인 신청서(1분) 또는 전화·문자 010-7137-5884로 신청하실 수 있습니다. 방문 상담은 미리 연락 주시면 시간을 맞춰 드립니다.</p></details>
     </div>
   </div>
@@ -401,13 +642,14 @@ footer b{color:var(--navy)}
         <p style="margin-bottom:24px">신청서를 남겨 주시면 원장이 직접 연락드립니다.</p>
         <div class="cta-row">
           <a class="btn btn-main" href="https://forms.gle/A4aLBfPEqvFQwLLo9" target="_blank" rel="noopener">1분 상담 신청 →</a>
+          <a class="btn btn-ghost" href="consult.html">학원 안내 한눈에 보기</a>
           <a class="btn btn-ghost" href="sms:010-7137-5884">문자 보내기</a>
           <a class="btn btn-ghost" href="https://www.instagram.com/ergo_5884/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-3px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> 인스타그램</a>
         </div>
       </div>
       <ul class="info-list">
         <li><b>전화</b><a href="tel:010-7137-5884">010-7137-5884</a></li>
-        <li><b>주소</b>인천 남동구 청능대로 583 중앙프라자 801호</li>
+        <li><b>주소</b>인천 남동구 청능대로 583 중앙프라자 801호 (서브웨이·우리은행 건물 8층)</li>
         <li><b>지도</b><a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%20%EB%82%A8%EB%8F%99%EA%B5%AC%20%EC%B2%AD%EB%8A%A5%EB%8C%80%EB%A1%9C%20583" target="_blank" rel="noopener" style="text-decoration:underline">네이버 지도에서 보기</a></li>
         <li><b>블로그</b><a href="https://blog.naver.com/hsi5884" target="_blank" rel="noopener" style="text-decoration:underline">blog.naver.com/hsi5884</a></li>
         <li><b>인스타</b><a href="https://www.instagram.com/ergo_5884/" target="_blank" rel="noopener" style="text-decoration:underline">@ergo_5884</a></li>
